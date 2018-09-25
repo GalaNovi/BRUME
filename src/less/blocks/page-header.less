@@ -12,3 +12,25 @@
   font-size: 14px;
   line-height: auto;
 }
+
+// =============================== Tablet =========================
+
+@media (max-width: @desktop) {
+  .page-header__heading {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .page-header__phone {
+    display: none;
+  }
+}
+
+// =============================== Mobile =========================
+
+@media (max-width: @tablet) {
+  .page-header__heading {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}

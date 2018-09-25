@@ -52,3 +52,55 @@
   border: 2px solid #00203a;
   background-color: transparent;
 }
+
+// =============================== Tablet =========================
+
+@media (max-width: @desktop) {
+  .service__menu-item a {
+    font-size: 22px;
+  }
+
+  .service__menu-item--active a {
+    font-size: 20px;
+    color: #00203a;
+  }
+
+  .service__project-count {
+    font-weight: 400;
+    font-size: 22px;
+    color: #182c3d;
+  }
+
+  .service__button {
+    padding: 20px 85px;
+  }
+}
+
+// =============================== Mobile =========================
+
+@media (max-width: @tablet) {
+  .service__text {
+    font-size: 20px;
+  }
+
+  .service__item-heading {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .service__button {
+    padding: 20px 40px;
+  }
+}
