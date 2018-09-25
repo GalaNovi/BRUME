@@ -1,0 +1,31 @@
+.features__list {
+  .list-reset;
+  counter-reset: myCounter;
+}
+
+.features__item {
+  &::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+
+    font-family: @PlayfairDisplay;
+    font-size: 85px;
+    font-weight: 700;
+    color: rgba(254, 160, 82, 0.26);
+    line-height: auto;
+  }
+}
+
+.features__item-heading {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: auto;
+  color: #1a292f;
+}
+
+.features__item-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #838383;
+}

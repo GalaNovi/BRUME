@@ -1,0 +1,36 @@
+.stages__heading {
+  font-family: @PlayfairDisplay;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: auto;
+  color: #00203a;
+}
+
+.stages__list {
+  .list-reset;
+  counter-reset: myCounter;
+}
+
+.stages__item {
+  &::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 42px;
+    color: #00203a;
+  }
+}
+
+.stages__item-heading {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: auto;
+  color: #313131;
+}
+
+.stages__item-text {
+  font-size: 16px;
+  line-height: 25px;
+}
