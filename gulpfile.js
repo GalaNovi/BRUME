@@ -148,7 +148,7 @@ gulp.task('cleanBuild', function () { // удаляет папку "build"
 });
 
 gulp.task('spriteDev', function() { // Оптимизирует SVG и создает спрайт для разработки
-  return gulp.src("src/img/icon-*.svg")
+  return gulp.src("src/img/icon_*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
@@ -160,7 +160,7 @@ gulp.task('spriteDev', function() { // Оптимизирует SVG и созд�
 });
 
 gulp.task('spriteBuild', function() { // Оптимизирует SVG и создает спрайт для билда
-  return gulp.src("src/img/icon-*.svg")
+  return gulp.src("src/img/icon_*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))

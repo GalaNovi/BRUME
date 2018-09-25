@@ -15,58 +15,68 @@
   </head>
   <body>
 
+    <div style="display:none;">
+      <include src="dev/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
-      <h1 class="page-header__heading">Дизайн интерьеров</h1>
-      <button class="page-header__menu-button">
-        <span class="visually-hidden">Открыть или закрыть меню</span>
-      </button>
-      <nav class="header-menu">
-        <ul class="header-menu__list">
-          <li class="header-menu__item"><a href="#">Главная</a></li>
-          <li class="header-menu__item"><a href="#features">Преимущества</a></li>
-          <li class="header-menu__item"><a href="#portfilio">Портфолио</a></li>
-          <li class="header-menu__item"><a href="#service">Наши услуги</a></li>
-          <li class="header-menu__item"><a href="#reviews">Отзывы</a></li>
-          <li class="header-menu__item"><a href="#contacts ">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="page-header__logo"><img src="http://placehold.it/62x29" alt="Логотип"></div>
-      <p class="page-header__phone">+7 (800) 823  48 88</p>
-      <section class="page-header__present present">
-        <h2 class="visually-hidden">Заказ дизайна интерьера</h2>
-        <p class="present__slogan">
-            Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
-        </p>
-        <a href="#" class="present__order-button">Заказать дизайн</a>
-        <div class="present__slider slider">
-          <ul class="slider__list">
-            <li class="slider__item"><img src="http://placehold.it/1163x595" alt="Пример нашейработы"></li>
+      <div class="container">
+        <h1 class="page-header__heading">Дизайн интерьеров</h1>
+        <button class="page-header__menu-button">
+          <span class="visually-hidden">Открыть или закрыть меню</span>
+        </button>
+        <nav class="header-menu">
+          <ul class="header-menu__list">
+            <li class="header-menu__item"><a href="#">Главная</a></li>
+            <li class="header-menu__item"><a href="#features">Преимущества</a></li>
+            <li class="header-menu__item"><a href="#portfilio">Портфолио</a></li>
+            <li class="header-menu__item"><a href="#service">Наши услуги</a></li>
+            <li class="header-menu__item"><a href="#reviews">Отзывы</a></li>
+            <li class="header-menu__item"><a href="#contacts ">Контакты</a></li>
           </ul>
-        </div>
-        <ul class="present__socials-list">
-          <li class="present__socials-item">
-            <a class="present__socials-icon present__socials-icon--vkontakte" href="#">
-              <span class="visually-hidden">
-                Вконтакте
-              </span>
-            </a>
-          </li>
-          <li class="present__socials-item">
-            <a class="present__socials-icon present__socials-icon--instagram" href="#">
-              <span class="visually-hidden">
-                Инстаграм
-              </span>
-            </a>
-          </li>
-          <li class="present__socials-item">
-            <a class="present__socials-icon present__socials-icon--facebook" href="#">
-              <span class="visually-hidden">
-                Фейсбук
-              </span>
-            </a>
-          </li>
-        </ul>
-      </section>
+        </nav>
+        <div class="page-header__logo"><img src="img/logo_header.png" alt="Логотип"></div>
+        <p class="page-header__phone">
+          <svg class="page-header__phone-icon" width="15" height="20" aria-hidden="true">
+            <use xlink:href="#icon_header_phone"></use>
+          </svg>+7 (800) 823  48 88</p>
+        <section class="page-header__present present">
+          <h2 class="visually-hidden">Заказ дизайна интерьера</h2>
+          <p class="present__slogan">
+              Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+          </p>
+          <a href="#" class="present__order-button">Заказать дизайн</a>
+          <ul class="present__slider">
+            <li class="present__slide"><img src="img/slide_header1.jpg" alt="Пример нашей работы"></li>
+          </ul>
+          <ul class="present__socials-list">
+            <li class="present__socials-item">
+              <a class="present__socials-icon present__socials-icon--vkontakte" href="#">
+                <svg width="14" height="10" aria-hidden="true">
+                  <use xlink:href="#icon_vkontakte"></use>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="present__socials-item">
+              <a class="present__socials-icon present__socials-icon--instagram" href="#">
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="#icon_instagram"></use>
+                </svg>
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+            <li class="present__socials-item">
+              <a class="present__socials-icon present__socials-icon--facebook" href="#">
+                <svg class="icon" width="7" height="14" aria-hidden="true">
+                  <use xlink:href="#icon_facebook"></use>
+                </svg>
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </header>
 
     <main class="page-main">

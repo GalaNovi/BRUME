@@ -1,4 +1,27 @@
+.page-header {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: rgba(17, 37, 55, 0.97);
+    content: "";
+    z-index: -1;
+  }
+}
+
 .page-header__heading {
+  .indent-reset;
+  margin-left: 95px;
+  margin-bottom: 25px;
+  padding-top: 255px;
+  width: 400px;
+
   font-family: @PlayfairDisplay;
   font-weight: 700;
   font-size: 64px;
@@ -6,11 +29,63 @@
   color: #ffffff;
 }
 
+.page-header__menu-button {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+
+  width: 26px;
+  height: 18px;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: center;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #ffffff;
+    box-shadow: 0 -8px 0 0 #ffffff, 0 8px 0 0 #ffffff;
+
+    content: "";
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  margin-top: 25px;
+
+  transform: translateX(-50%);
+}
+
 .page-header__phone {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
   font-family: @Muller;
   font-weight: 300;
   font-size: 14px;
   line-height: auto;
+  color: #252525;
+  letter-spacing: 1.3px;
+}
+
+.page-header__phone-icon {
+  position: absolute;
+  top: 3px;
+  left: -25px;
+
+  fill: rgba(0, 0, 0, 0.5);
 }
 
 // =============================== Tablet =========================
