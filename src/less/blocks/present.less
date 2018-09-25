@@ -35,25 +35,26 @@
 
 .present__socials-list {
   .list-reset;
+  margin-top: 200px;
+  margin-left: 5px;
+  padding-bottom: 25px;
   display: flex;
 }
 
-.present__socials-icon {
+.present__socials-link {
   display: block;
-  margin-right: 20px;
+  margin-right: 35px;
 
-  &--vkontakte {
+  svg {
+    fill: rgba(255, 255, 255, 0.7);
   }
 
-  &--instagram {
+  &:hover,
+  &:focus {
+    svg {
+      fill: rgba(255, 255, 255, 1);
+    }
   }
-
-  &--facebook {
-  }
-}
-
-.icon {
-  fill: rgba(255, 255, 255, 1);
 }
 
 // =============================== Tablet =========================

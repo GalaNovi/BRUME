@@ -1,10 +1,26 @@
+.features {
+  padding-top: 130px;
+}
+
 .features__list {
   .list-reset;
   counter-reset: myCounter;
+
+  display: flex;
 }
 
 .features__item {
+  padding-right: 20px;
+  width: 25%;
+
+  &:nth-child(even) {
+    margin-top: 210px;
+  }
+
   &::before {
+    display: block;
+    margin-bottom: 35px;
+
     counter-increment: myCounter;
     content: counter(myCounter, decimal-leading-zero);
 
@@ -17,17 +33,22 @@
 }
 
 .features__item-heading {
+  margin-bottom: 15px;
+
   font-weight: 600;
   font-size: 22px;
-  line-height: auto;
+  line-height: 28px;
   color: #1a292f;
 }
 
 .features__item-text {
+  .indent-reset;
+
   font-weight: 300;
   font-size: 16px;
   line-height: 25px;
   color: #838383;
+  letter-spacing: 0.9px;
 }
 
 // =============================== Tablet =========================
