@@ -6,7 +6,7 @@
 .features__item {
   &::before {
     counter-increment: myCounter;
-    content: counter(myCounter);
+    content: counter(myCounter, decimal-leading-zero);
 
     font-family: @PlayfairDisplay;
     font-size: 85px;
