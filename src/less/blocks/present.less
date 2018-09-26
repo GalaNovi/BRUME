@@ -1,6 +1,6 @@
 .present__slogan {
   margin-left: 100px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   width: 350px;
 
   font-family: @Muller;
@@ -24,6 +24,9 @@
   letter-spacing: 1.7px;
 
   background-color: #f8a25a;
+  border: none;
+
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -41,17 +44,24 @@
 }
 
 .present__slider {
-  .list-reset;
+  .indent-reset;
   position: absolute;
   top: 85px;
   left: 20px;
 
   z-index: -2;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: 74% 50%;
+  }
 }
 
 .present__socials-list {
   .list-reset;
-  margin-top: 200px;
+  margin-top: 185px;
   margin-left: 5px;
   padding-bottom: 25px;
   display: flex;
@@ -76,15 +86,82 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .present {
+    padding-bottom: 315px;
+  }
+
   .present__slogan {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 610px;
+
     font-size: 26px;
-    line-height: auto;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 1.3px;
+  }
+
+  .present__order-button-wrapper {
+    text-align: center;
   }
 
   .present__order-button {
-    padding: 35px 60px;
+    margin: 0;
+    padding: 37px 55px;
 
     font-size: 30px;
+    letter-spacing: 3.2px;
+
+    &::before {
+      top: 215px;
+      left: 212px;
+
+      width: 20px;
+      height: 82px;
+
+      background: url("../img/arrow_dwn.svg") no-repeat;
+
+      opacity: 0.5;
+      animation: arrow-down 0.8s ease-in-out alternate infinite;
+      cursor: default;
+    }
+  }
+
+  .present__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    z-index: -2;
+  }
+
+  .present__socials-list {
+    display: none;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    margin-left: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .present__socials-link {
+    margin-right: 100px;
+
+    svg {
+      width: 37px;
+      height: 37px;
+
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .present__socials-item:last-child {
+    .present__socials-link {
+      margin-right: 0;
+    }
   }
 }
 

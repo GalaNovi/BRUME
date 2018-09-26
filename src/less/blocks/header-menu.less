@@ -39,8 +39,28 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .header-menu {
+    display: none;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .header-menu__list {
+    padding-top: 230px;
+  }
+
+  .header-menu__item {
+    margin-bottom: 55px;
+  }
+
   .header-menu__item a {
     font-size: 35px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 3.5px;
   }
 }
 

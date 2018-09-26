@@ -46,27 +46,30 @@
 
   cursor: pointer;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
-    top: center;
+    top: 0;
     left: 0;
 
     width: 100%;
     height: 2px;
 
     background-color: #ffffff;
-    box-shadow: 0 -8px 0 0 #ffffff, 0 8px 0 0 #ffffff;
-
     content: "";
+  }
+
+  &::after {
+    top: 8px;
+
+    box-shadow: 0 8px 0 0 #ffffff;
   }
 }
 
 .page-header__logo {
   position: absolute;
-  top: 0;
+  top: 25px;
   left: 50%;
-
-  margin-top: 25px;
 
   transform: translateX(-50%);
 }
@@ -129,9 +132,53 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .page-header {
+    &::before {
+      width: 100%;
+
+      background-color: rgba(17, 37, 55, 0.88);
+    }
+  }
+
+  .page-header__menu-button {
+    top: 60px;
+    left: auto;
+    right: 37px;
+
+    width: 64px;
+    height: 44px;
+
+    &::before,
+    &::after {
+      height: 5px;
+      border-radius: 2px;
+    }
+
+    &::after {
+      top: 20px;
+      box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    z-index: 2;
+  }
+
+  .page-header__logo {
+    top: 60px;
+    left: 35px;
+
+    transform: translateX(0);
+  }
+
   .page-header__heading {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding-top: 300px;
+    width: 610px;
+
     font-size: 100px;
     line-height: 100px;
+    text-align: center;
+    letter-spacing: 2.5px;
   }
 
   .page-header__phone {
