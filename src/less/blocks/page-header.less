@@ -13,6 +13,10 @@
     content: "";
     z-index: -1;
   }
+
+  .container {
+    background-image: none;
+  }
 }
 
 .page-header__heading {
@@ -86,6 +90,40 @@
   left: -25px;
 
   fill: rgba(0, 0, 0, 0.5);
+}
+
+.page-header__background-lines {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: @desktop;
+  height: 100%;
+  margin: 0 auto;
+
+  z-index: -3;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 85px;
+    right: 16px;
+
+    width: 1px;
+    height: calc(100% - 85px);
+
+    background-color: rgba(17, 37, 55, 0.05);
+
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+    right: 308px;
+
+    height: 100%;
+  }
 }
 
 // =============================== Tablet =========================

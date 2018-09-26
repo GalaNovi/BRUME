@@ -1,36 +1,84 @@
+.stages {
+  .container {
+    padding-top: 105px;
+    padding-bottom: 85px;
+  }
+}
+
 .stages__heading {
   font-family: @PlayfairDisplay;
   font-weight: 700;
   font-size: 45px;
   line-height: auto;
   color: #00203a;
+  letter-spacing: 0.7px;
 }
 
 .stages__list {
   .list-reset;
+  padding-top: 45px;
+  padding-left: 85px;
   counter-reset: myCounter;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .stages__item {
+  position: relative;
+  margin-bottom: 35px;
+  width: 275px;
+
   &::before {
     counter-increment: myCounter;
     content: counter(myCounter);
+    position: absolute;
+    top: -20px;
+    left: -85px;
+    padding-top: 13px;
+
+    width: 70px;
+    height: 70px;
 
     font-weight: 500;
     font-size: 12px;
     line-height: 42px;
     color: #00203a;
+    text-align: center;
+
+    border-radius: 50%;
+    background: radial-gradient(rgba(253, 229, 209, 1) 20%, transparent 20%, transparent 33%, rgba(253, 229, 209, 0.7) 33%, rgba(253, 229, 209, 0.7) 35%, transparent 35%, transparent 48%, rgba(253, 229, 209, 0.4) 48%, rgba(253, 229, 209, 0.4) 50%, transparent 50%, transparent 63%, rgba(253, 229, 209, 0.2) 63%, rgba(253, 229, 209, 0.2) 65%, transparent 65%);
   }
 }
 
 .stages__item-heading {
+  .indent-reset;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 22px;
   line-height: auto;
   color: #313131;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+
+    width: 40px;
+    height: 1px;
+
+    background-color: #182c3d;
+
+    content: "";
+  }
 }
 
 .stages__item-text {
+  .indent-reset;
+
   font-size: 16px;
   line-height: 25px;
 }

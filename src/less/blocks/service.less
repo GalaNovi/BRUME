@@ -1,3 +1,10 @@
+.service {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+}
+
 .service__heading {
   font-family: @PlayfairDisplay;
   font-weight: 700;
@@ -6,15 +13,32 @@
   color: #00203a;
 }
 
+.service__content-wrapper {
+  display: flex;
+}
+
 .service__menu-list {
   .list-reset;
+  padding-top: 45px;
+  width: 288px;
+}
+
+.service__menu-item {
+  margin-bottom: 75px;
+  width: 200px;
+
+  &--active {
+    margin-left: 35px;
+  }
 }
 
 .service__menu-item a {
+  display: block;
+
   font-family: @Raleway;
   font-weight: 300;
   font-size: 18px;
-  line-height: auto;
+  line-height: 22px;
   color: #7d7d7d;
 }
 
@@ -27,30 +51,66 @@
   .list-reset;
 }
 
+.service__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 35px;
+}
+
+.service__image {
+  margin-bottom: 55px;
+  order: -1;
+
+  img {
+    display: block;
+  }
+}
+
 .service__item-heading {
+  .indent-reset;
+  margin-bottom: 20px;
+  width: 500px;
+
   font-family: @PlayfairDisplay;
   font-weight: 500;
   font-size: 30px;
   line-height: auto;
   color: #00203a;
+  letter-spacing: 0.9px;
 }
 
 .service__project-count {
+  margin-right: 5px;
+  padding-top: 5px;
+
   font-weight: 400;
   color: #182c3d;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.service__text {
+  .indent-reset;
+  width: 500px;
 }
 
 .service__button {
-  padding: 20px 40px;
+  margin-top: 55px;
+  padding: 17px 40px;
+  padding-right: 35px;
 
   font-weight: 800;
   font-size: 15px;
   line-height: auto;
   color: #00203a;
   text-transform: uppercase;
+  letter-spacing: 1.6px;
 
   border: 2px solid #00203a;
   background-color: transparent;
+  cursor: pointer;
 }
 
 // =============================== Tablet =========================

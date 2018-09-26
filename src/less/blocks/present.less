@@ -12,6 +12,7 @@
 }
 
 .present__order-button {
+  position: relative;
   margin-left: 100px;
   padding: 20px 90px 20px 30px;
 
@@ -23,12 +24,27 @@
   letter-spacing: 1.7px;
 
   background-color: #f8a25a;
+
+  &::before {
+    position: absolute;
+    top: 23px;
+    right: 10%;
+
+    width: 40px;
+    height: 10px;
+
+    background: url("../img/arrow_btn.svg") no-repeat;
+    content: "";
+
+    animation: arrow-right 0.8s ease-in-out alternate infinite;
+  }
 }
 
 .present__slider {
+  .list-reset;
   position: absolute;
-  top: 65px;
-  left: -20px;
+  top: 85px;
+  left: 20px;
 
   z-index: -2;
 }

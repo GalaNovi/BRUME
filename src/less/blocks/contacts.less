@@ -1,27 +1,58 @@
+.contacts {
+  background: #182c3d url("../img/contacts_bg.jpg") no-repeat right -130px;
+}
+
 .contacts__content-wrapper {
+  padding: 70px 95px 80px 10px;
+  width: 50%;
+
   background-color: #182c3d;
 }
 
 .contacts__question {
+  display: block;
+  padding-bottom: 20px;
+
   font-family: @PlayfairDisplay;
   font-weight: 700;
-  font-size: 45px;
-  line-height: auto;
+  font-size: 40px;
+  line-height: 44px;
   color: #ffffff;
+  letter-spacing: 0.9px;
 }
 
 .contacts__request {
+  .indent-reset;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.8px;
+}
+
+.contacts__form {
+  padding-top: 20px;
+}
+
+.contacts__item {
+  .indent-reset;
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .contacts__input {
+  padding-left: 5px;
+  padding-right: 50px;
+  width: 100%;
+  height: 45px;
+
   font-size: 14px;
   line-height: 18px;
+  color: #ffffff;
 
   border: none;
+  border-bottom: 2px solid rgba(253, 229, 209, 0.53);
   background-color: transparent;
 
   &::-webkit-input-placeholder {
@@ -37,24 +68,64 @@
   }
 }
 
+.contacts__icon {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+
+  opacity: 0.6;
+
+  &--name {
+    width: 18px;
+    height: 20px;
+
+    background: url("../img/input_name.png") no-repeat;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+
+    background: url("../img/input_phone.png") no-repeat;
+  }
+
+  &--email {
+    top: 13px;
+    width: 22px;
+    height: 16px;
+
+    background: url("../img/input_email.png") no-repeat;
+  }
+}
+
 .contacts__button {
-  padding: 25px 50px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 23px 50px 21px;
+  width: 100%;
 
   font-weight: 800;
   font-size: 15px;
   line-height: 16px;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 2.5px;
+
 
   border: 2px solid #ffffff;
   border-radius: 5px;
   background-color: transparent;
+
+  cursor: pointer;
 }
 
 .contacts__notice {
+  display: block;
+
   font-size: 14px;
-  line-height: auto;
+  line-height: 18px;
   color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.8px;
 }
 
 // =============================== Tablet =========================

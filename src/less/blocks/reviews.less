@@ -1,9 +1,20 @@
+.reviews {
+  .container {
+    padding-top: 160px;
+    padding-bottom: 245px;
+  }
+}
+
 .reviews__heading {
+  .indent-reset;
+  margin-bottom: 90px;
+
   font-family: @PlayfairDisplay;
   font-weight: 700;
   font-size: 45px;
   line-height: auto;
   color: #00203a;
+  letter-spacing: 0.6px;
 }
 
 .reviews__slider {
@@ -11,26 +22,47 @@
 }
 
 .reviews__slide {
-  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding: 45px 75px 35px;
+  padding-right: 0;
+  width: 793px;
+  background-image: linear-gradient(to right, #ffffff 82%, transparent 82%);
 }
 
-.reviews__name {
+.reviews__slide-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+.reviews__author {
+  margin-bottom: 10px;
+
   font-weight: 600;
   font-size: 22px;
   color: #313131;
 }
 
-.reviews__order-info {
+.reviews__author-info {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #efb172;
+  letter-spacing: 0.9px;
 }
 
 .reviews__text {
+  .indent-reset;
+
   font-size: 16px;
   line-height: 25px;
   color: #5e5e5e;
+  letter-spacing: 0.1px;
 }
 
 // =============================== Tablet =========================
