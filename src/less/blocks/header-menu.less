@@ -2,11 +2,17 @@
   display: none;
   position: absolute;
   top: 83px;
-  left: 20px;
+  left: 15px;
 
-  width: calc(100% - 35px);
-  height: 595px;
+  width: calc(100% - 30px);
+  height: 597px;
   background-color: #112537;
+
+  z-index: 1;
+
+  &--show {
+    display: block;
+  }
 }
 
 .header-menu__list {
@@ -40,7 +46,6 @@
 
 @media (max-width: @desktop) {
   .header-menu {
-    display: none;
     top: 0;
     left: 0;
 
@@ -67,7 +72,16 @@
 // =============================== Mobile =========================
 
 @media (max-width: @tablet) {
+  .header-menu__list {
+    padding-top: 110px;
+  }
+
+  .header-menu__item {
+    margin-bottom: 18px;
+  }
+
   .header-menu__item a {
     font-size: 20px;
+    letter-spacing: 2px;
   }
 }

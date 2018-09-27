@@ -149,19 +149,19 @@
     width: 50%;
     min-height: 103px;
 
+    a {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
     &--active {
       margin-left: 0;
+
+      a {
+        font-size: 22px;
+        color: #00203a;
+      }
     }
-  }
-
-  .service__menu-item a {
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .service__menu-item--active a {
-    font-size: 22px;
-    color: #00203a;
   }
 
   .service__item {
@@ -198,7 +198,60 @@
 // =============================== Mobile =========================
 
 @media (max-width: @tablet) {
+  .service {
+    .container {
+      padding-top: 100px;
+      padding-bottom: 110px;
+      max-width: none;
+    }
+  }
+
+  .service__heading {
+    margin-bottom: 25px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .service__menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .service__menu-item {
+    margin-bottom: 32px;
+    padding-right: 0;
+    padding-bottom: 0;
+    width: auto;
+    min-height: auto;
+  }
+
+  .service__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .service__image {
+    margin: 0 -15px;
+    margin-bottom: 25px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: 22% 50%;
+    }
+  }
+
+  .service__project-count {
+    display: none;
+  }
+
   .service__text {
+    margin-bottom: 15px;
+    width: auto;
     font-size: 20px;
   }
 
@@ -220,6 +273,7 @@
   }
 
   .service__button {
-    padding: 20px 40px;
+    padding: 18px 35px 16px;
+    font-size: 15px;
   }
 }

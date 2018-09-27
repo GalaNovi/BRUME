@@ -133,6 +133,7 @@
     left: 35px;
 
     transform: translateX(0);
+    z-index: 1;
   }
 
   .page-header__heading {
@@ -155,8 +156,40 @@
 // =============================== Mobile =========================
 
 @media (max-width: @tablet) {
+  .page-header {
+    min-height: 608px;
+  }
+
   .page-header__heading {
+    margin-bottom: 25px;
+    padding-top: 170px;
+    width: auto;
+
     font-size: 48px;
     line-height: 48px;
+    letter-spacing: 0.7px;
+  }
+
+  .page-header__logo {
+    top: 25px;
+    left: 15px;
+  }
+
+  .page-header__menu-button {
+    top: 25px;
+    right: 15px;
+
+    width: 34px;
+    height: 24px;
+
+    &::before,
+    &::after {
+      height: 3px;
+    }
+
+    &::after {
+      top: 10px;
+      box-shadow: 0 10px 0 0 #ffffff;
+    }
   }
 }

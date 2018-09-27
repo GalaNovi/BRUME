@@ -3,8 +3,6 @@
 
   .container {
     padding-top: 130px;
-
-    background-image: none;
   }
 }
 
@@ -63,14 +61,6 @@
   .features {
     .container {
       padding-top: 100px;
-
-      &::before {
-        transform: translateX(-50%) skewY(6deg);
-      }
-
-      &::after {
-        top: 100px;
-      }
     }
   }
 
@@ -94,5 +84,42 @@
 
   .features__item-text {
     font-size: 18px;
+  }
+}
+
+// ============================ Mobile ==================
+
+@media (max-width: @tablet) {
+  .features {
+    .container {
+      padding-top: 75px;
+    }
+  }
+
+  .features__list {
+    flex-direction: column;
+  }
+
+  .features__item {
+    margin-bottom: 35px;
+    padding-right: 0;
+    width: auto;
+
+    &:nth-child(even) {
+      margin-top: 0;
+      margin-bottom: 35px;
+    }
+
+    &:nth-child(3) {
+      &::before {
+        margin-bottom: 50px;
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        margin-bottom: 50px;
+      }
+    }
   }
 }

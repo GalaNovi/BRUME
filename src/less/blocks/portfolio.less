@@ -185,7 +185,38 @@
 // =============================== Mobile =========================
 
 @media (max-width: @tablet) {
-  .portfolio__all-item-heading {
-    font-size: 18px;
+  .portfolio {
+    .container {
+      padding-top: 50px;
+    }
+  }
+
+  .portfolio__navigation {
+    margin-bottom: 15px;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolio__navigation-item {
+    margin-bottom: 20px;
+  }
+
+  .portfolio__item {
+    margin: 0 auto;
+    width: 260px;
+    height: 529px;
+
+    &--active {
+      .portfolio__item-heading {
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        min-width: 290px;
+
+        font-size: 18px;
+        text-align: center;
+      }
+    }
   }
 }

@@ -140,8 +140,41 @@
 // =============================== Mobile =========================
 
 @media (max-width: @tablet) {
+  .stages {
+    .container {
+      padding-top: 65px;
+      padding-bottom: 55px;
+    }
+  }
+
+  .stages__heading {
+    text-align: center;
+    line-height: 54px;
+  }
+
+  .stages__list {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .stages__item {
+    margin-bottom: 50px;
+    padding-left: 0;
+    width: auto;
+    min-height: auto;
+
+    // @media (min-width: 1132px) {
+    //   width: 33%;
+    // }
+
+    &::before {
+      display: none;
+    }
+  }
+
   .stages__item-heading {
-    font-size: 24px;
+    padding-bottom: 15px;
+    font-size: 22px;
     line-height: 18px;
   }
 
