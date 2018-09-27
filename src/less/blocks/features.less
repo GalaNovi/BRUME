@@ -1,6 +1,10 @@
 .features {
+  position: relative;
+
   .container {
     padding-top: 130px;
+
+    background-image: none;
   }
 }
 
@@ -56,6 +60,34 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .features {
+    .container {
+      padding-top: 100px;
+
+      &::before {
+        transform: translateX(-50%) skewY(6deg);
+      }
+
+      &::after {
+        top: 100px;
+      }
+    }
+  }
+
+  .features__list {
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    padding-right: 65px;
+    width: 50%;
+
+    &:nth-child(even) {
+      margin-top: 165px;
+      margin-bottom: 15px;
+    }
+  }
+
   .features__item-heading {
     font-size: 24px;
   }

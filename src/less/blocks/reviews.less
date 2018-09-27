@@ -1,4 +1,6 @@
 .reviews {
+  position: relative;
+
   .container {
     padding-top: 160px;
     padding-bottom: 245px;
@@ -67,9 +69,42 @@
 
 // =============================== Tablet =========================
 
-// @media (max-width: @desktop) {
+@media (max-width: @desktop) {
+  .reviews {
+    .container {
+      padding-top: 190px;
+      padding-bottom: 220px;
 
-// }
+      &::before {
+        top: -285px;
+        transform: translateX(-50%) skewY(43deg);
+      }
+    }
+  }
+
+  .reviews__heading {
+    margin-bottom: 60px;
+  }
+
+  .reviews__slider {
+    margin: 0 -37px;
+    padding-left: 37px;
+  }
+
+  .reviews__slide {
+    padding: 45px 65px 35px;
+    padding-right: 0;
+    width: 731px;
+    background-image: linear-gradient(to right, #ffffff 89%, transparent 89%);
+  }
+
+  .reviews__photo {
+    width: 187px;
+    height: 192px;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+}
 
 // =============================== Mobile =========================
 

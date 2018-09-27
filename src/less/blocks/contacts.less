@@ -1,5 +1,9 @@
 .contacts {
-  background: #182c3d url("../img/contacts_bg.jpg") no-repeat right -130px;
+  background: #182c3d url("../img/contacts_bg.jpg") no-repeat right -30px;
+
+  .container {
+    background-image: none;
+  }
 }
 
 .contacts__content-wrapper {
@@ -19,6 +23,10 @@
   line-height: 44px;
   color: #ffffff;
   letter-spacing: 0.9px;
+
+  br {
+    display: none;
+  }
 }
 
 .contacts__request {
@@ -131,8 +139,44 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .contacts {
+    background: #182c3d url("../img/contacts_bg-tablet.jpg") no-repeat center bottom;
+  }
+
+  .contacts__content-wrapper {
+    padding: 70px 20px 85px;
+    width: auto;
+
+    background-color: transparent;
+  }
+
+  .contacts__question {
+    display: block;
+    font-size: 45px;
+    line-height: 52px;
+    text-align: center;
+
+    br {
+      display: block;
+    }
+  }
+
   .contacts__request {
+    margin: 0 auto;
+    width: 475px;
+
     font-size: 22px;
+    text-align: center;
+  }
+
+  .contacts__form {
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 475px;
+  }
+
+  .contacts__item {
+    margin-bottom: 35px;
   }
 
   .contacts__input {
@@ -140,6 +184,9 @@
   }
 
   .contacts__button {
+    margin-bottom: 15px;
+    padding: 28px 50px 25px;
+
     font-size: 18px;
     line-height: 18px;
 
@@ -149,6 +196,7 @@
 
   .contacts__notice {
     font-size: 18px;
+    text-align: center;
   }
 }
 

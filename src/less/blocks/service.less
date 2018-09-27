@@ -1,4 +1,6 @@
 .service {
+  position: relative;
+
   .container {
     padding-top: 100px;
     padding-bottom: 65px;
@@ -20,7 +22,7 @@
 .service__menu-list {
   .list-reset;
   padding-top: 45px;
-  width: 288px;
+  width: 293px;
 }
 
 .service__menu-item {
@@ -116,13 +118,68 @@
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
+  .service {
+    .container {
+      padding-top: 220px;
+      padding-bottom: 200px;
+      max-width: 950px;
+    }
+  }
+
+  .service__heading {
+    letter-spacing: 0.5px;
+  }
+
+  .service__content-wrapper {
+    flex-direction: column;
+  }
+
+  .service__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    width: auto;
+  }
+
+  .service__menu-item {
+    margin-bottom: 0;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    width: 50%;
+    min-height: 103px;
+
+    &--active {
+      margin-left: 0;
+    }
+  }
+
   .service__menu-item a {
     font-size: 22px;
+    line-height: 26px;
   }
 
   .service__menu-item--active a {
-    font-size: 20px;
+    font-size: 22px;
     color: #00203a;
+  }
+
+  .service__item {
+    padding-top: 0;
+  }
+
+  .service__image {
+    margin: 0 -37px;
+    margin-bottom: 60px;
+    width: 100vw;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: 22% 50%;
+    }
   }
 
   .service__project-count {
@@ -132,7 +189,9 @@
   }
 
   .service__button {
-    padding: 20px 85px;
+    margin-top: 30px;
+    padding: 22px 85px;
+    font-size: 18px;
   }
 }
 

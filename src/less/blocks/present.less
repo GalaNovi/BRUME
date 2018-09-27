@@ -47,13 +47,15 @@
   .indent-reset;
   position: absolute;
   top: 85px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
 
   z-index: -2;
 
   img {
     display: block;
-    height: 100%;
+    height: 595px;
     object-fit: cover;
     object-position: 74% 50%;
   }
@@ -128,13 +130,19 @@
   }
 
   .present__slider {
-    position: absolute;
     top: 0;
     left: 0;
-
-    height: 100%;
+    width: 100%;
+    height: 1111px;
+    transform: translateX(0);
 
     z-index: -2;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 75% 50%;
+    }
   }
 
   .present__socials-list {

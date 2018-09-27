@@ -1,4 +1,6 @@
 .stages {
+  position: relative;
+
   .container {
     padding-top: 105px;
     padding-bottom: 85px;
@@ -85,9 +87,55 @@
 
 // =============================== Tablet =========================
 
-// @media (max-width: @desktop) {
+@media (max-width: @desktop) {
+  .stages {
+    .container {
+      padding-top: 150px;
+      padding-bottom: 95px;
+    }
+  }
 
-// }
+  .stages__list {
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-left: 0;
+    width: auto;
+    justify-content: center;
+  }
+
+  .stages__item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 75px;
+    width: 50%;
+    min-height: 200px;
+
+    @media (min-width: 1132px) {
+      width: 33%;
+    }
+
+    &::before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      position: absolute;
+      top: -20px;
+      left: 0;
+      padding-top: 13px;
+
+      width: 70px;
+      height: 70px;
+
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 42px;
+      color: #00203a;
+      text-align: center;
+
+      border-radius: 50%;
+      background: radial-gradient(rgba(253, 229, 209, 1) 20%, transparent 20%, transparent 33%, rgba(253, 229, 209, 0.7) 33%, rgba(253, 229, 209, 0.7) 35%, transparent 35%, transparent 48%, rgba(253, 229, 209, 0.4) 48%, rgba(253, 229, 209, 0.4) 50%, transparent 50%, transparent 63%, rgba(253, 229, 209, 0.2) 63%, rgba(253, 229, 209, 0.2) 65%, transparent 65%);
+    }
+  }
+}
 
 // =============================== Mobile =========================
 
