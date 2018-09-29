@@ -111,14 +111,14 @@ gulp.task('styleBuild', function () { // Создает из стилей less s
 });
 
 gulp.task('copyDev', function () { // копирует файлы для разработки
-  return gulp.src('src/{fonts,js,img}/*.*', {since: gulp.lastRun('copyDev')})
+  return gulp.src('src/{fonts,js,img,css}/*.*', {since: gulp.lastRun('copyDev')})
   .pipe(newer('dev'))
   .pipe(gulp.dest('dev'))
 });
 
 gulp.task('copyBuild', function () { // копирует шрифты для билда
-  return gulp.src('src/fonts/*.*')
-  .pipe(gulp.dest('build/fonts'))
+  return gulp.src('src/{fonts,css}/*.*')
+  .pipe(gulp.dest('build'))
 });
 
 gulp.task('copyHTMLDev', function () { // копирует html для разработки

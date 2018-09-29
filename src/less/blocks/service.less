@@ -51,6 +51,7 @@
 
 .servise__list {
   .list-reset;
+  display: flex;
 }
 
 .service__item {
@@ -122,7 +123,6 @@
     .container {
       padding-top: 220px;
       padding-bottom: 200px;
-      max-width: 950px;
     }
   }
 
@@ -169,9 +169,10 @@
   }
 
   .service__image {
+    flex-grow: 1;
     margin: 0 -37px;
     margin-bottom: 60px;
-    width: 100vw;
+    width: 100%;
 
     img {
       display: block;
@@ -179,6 +180,9 @@
       height: 100%;
       object-fit: cover;
       object-position: 22% 50%;
+      /* stylelint-disable */
+      font-family: 'object-fit: cover; object-position: 22% 50%;';
+      /* stylelint-enable */
     }
   }
 
@@ -235,14 +239,6 @@
   .service__image {
     margin: 0 -15px;
     margin-bottom: 25px;
-
-    img {
-      display: block;
-      margin: 0 auto;
-      height: 100%;
-      object-fit: cover;
-      object-position: 22% 50%;
-    }
   }
 
   .service__project-count {

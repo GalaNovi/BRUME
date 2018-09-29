@@ -9,9 +9,11 @@
     <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="preload" href="fonts/Circe-Regular.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/IntroScriptR.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/PlayfairDisplayBold.woff2" as="font" crossorigin>
-    <link rel="preload" href="js/menu.js" as="script"> -->
+    <link rel="preload" href="fonts/PlayfairDisplayBold.woff2" as="font" crossorigin> -->
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="js/menu.js" as="script">
+    <script src="js/ofi.min.js"></script>
   </head>
   <body>
 
@@ -57,7 +59,28 @@
               <picture>
                 <source media="(max-width: 768px)" srcset="img/slide_header1-mobile.jpg">
                 <source media="(max-width: 1200px)" srcset="img/slide_header1-tablet.jpg">
-                <img src="img/slide_header1.jpg" alt="Пример нашей работы">
+                <img class="slide" src="img/slide_header1.jpg" alt="Пример нашей работы">
+              </picture>
+            </div>
+            <div class="present__slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/slide_header2-mobile.jpg">
+                <source media="(max-width: 1200px)" srcset="img/slide_header2-tablet.jpg">
+                <img class="slide" src="img/slide_header2.jpg" alt="Пример нашей работы">
+              </picture>
+            </div>
+            <div class="present__slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/slide_header3-mobile.jpg">
+                <source media="(max-width: 1200px)" srcset="img/slide_header3-tablet.jpg">
+                <img class="slide" src="img/slide_header3.jpg" alt="Пример нашей работы">
+              </picture>
+            </div>
+            <div class="present__slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/slide_header4-mobile.jpg">
+                <source media="(max-width: 1200px)" srcset="img/slide_header4-tablet.jpg">
+                <img class="slide" src="img/slide_header4.jpg" alt="Пример нашей работы">
               </picture>
             </div>
           </div>
@@ -127,28 +150,32 @@
             <li class="portfolio__navigation-item"><a href="#">Дизайн интерьеров</a></li>
             <li class="portfolio__navigation-item"><a href="#">Отделочные работы</a></li>
           </ul>
-          <ul class="portfolio__slider">
-            <li class="portfolio__item">
+          <div class="portfolio__slider">
+            <div class="portfolio__item">
               <h3 class="portfolio__item-heading">Дизайн интерьера гостиной</h3>
               <img src="img/portfolio_1.jpg" alt="Дизайн интерьера гостиной">
               <span class="portfolio__item-class">Дизайн интерьера</span>
-            </li>
-            <li class="portfolio__item portfolio__item--active">
+              <a href="#" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item">
               <h3 class="portfolio__item-heading">Дизайн интерьера гостиной</h3>
               <img src="img/portfolio_2.jpg" alt="Пример гостинной">
               <span class="portfolio__item-class">Дизайн интерьера</span>
-            </li>
-            <li class="portfolio__item">
+              <a href="#" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item">
               <h3 class="portfolio__item-heading">Дизайн столовой в стиле «Бохо»</h3>
               <img src="img/portfolio_3.jpg" alt="Дизайн столовой в стиле «Бохо»">
               <span class="portfolio__item-class">Дизайн интерьера</span>
-            </li>
-            <li class="portfolio__item">
+              <a href="#" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item">
               <h3 class="portfolio__item-heading">Лофт интерьер для отеля Hiloft</h3>
               <img src="img/portfolio_4.jpg" alt="Лофт интерьер для отеля Hiloft">
               <span class="portfolio__item-class">Дизайн интерьера</span>
-            </li>
-          </ul>
+              <a href="#" class="portfolio__item-preview"></a>
+            </div>
+          </div>
         </div>
         <div class="lines"></div>
       </section>
@@ -171,7 +198,7 @@
               <li class="service__item">
                 <h3 class="service__item-heading">Дизайн коммерческих объектов</h3>
                 <small class="service__project-count">532 проекта</small>
-                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую  аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе,бара,  гостиницы хотели возвращаться в интерьер снова и снова
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
@@ -308,8 +335,11 @@
       </div>
     </footer>
 
-    <script src="js/polyfills/picturefill.js"></script>
-    <script src="js/polyfills/polyfill.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/all.js"></script>
   </body>
 </html>

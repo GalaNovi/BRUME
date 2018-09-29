@@ -1,3 +1,4 @@
 [
-  "src/js/modules/empty.js"
+  "src/js/modules/sliders.js",
+  "src/js/modules/portfolio-slider.js"
 ]

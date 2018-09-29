@@ -1,4 +1,5 @@
 .present__slogan {
+  position: relative;
   margin-left: 100px;
   margin-bottom: 35px;
   width: 350px;
@@ -9,6 +10,7 @@
   line-height: 20px;
   color: #ffffff;
   letter-spacing: 0.8px;
+  z-index: 2;
 }
 
 .present__order-button {
@@ -27,6 +29,7 @@
   border: none;
 
   cursor: pointer;
+  z-index: 2;
 
   &::before {
     position: absolute;
@@ -47,26 +50,80 @@
   .indent-reset;
   position: absolute;
   top: 85px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: calc(100% - 30px);
 
-  z-index: -2;
+  outline: none;
 
   img {
     display: block;
     height: 595px;
     object-fit: cover;
     object-position: 74% 50%;
+
+    /* stylelint-disable */
+    font-family: 'object-fit: cover; object-position: 74% 50%;';
+    /* stylelint-enable */
+  }
+
+  .slick-dots {
+    .list-reset;
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+
+    li {
+      position: relative;
+      width: 26px;
+      height: 3px;
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: center;
+      left: 0;
+      width: 26px;
+      height: 3px;
+
+      font-size: 0;
+
+      border: none;
+      background-color: rgba(26, 68, 74, 0.2);
+      outline: none;
+
+      cursor: pointer;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: rgba(26, 68, 74, 1);
+    }
   }
 }
 
+.present__slide {
+  height: 100%;
+}
+
 .present__socials-list {
+  position: relative;
   .list-reset;
   margin-top: 185px;
   margin-left: 5px;
   padding-bottom: 25px;
   display: flex;
+  width: 111px;
+
+  z-index: 3;
 }
 
 .present__socials-link {
@@ -136,12 +193,12 @@
     height: 1111px;
     transform: translateX(0);
 
-    z-index: -2;
-
     img {
-      height: 100%;
-      object-fit: cover;
+      height: 1111px;
       object-position: 75% 50%;
+      /* stylelint-disable */
+      font-family: 'object-fit: cover; object-position: 75% 50%;';
+      /* stylelint-enable */
     }
   }
 
@@ -151,8 +208,8 @@
     bottom: 150px;
     left: 50%;
     margin-left: 0;
+    width: auto;
     transform: translateX(-50%);
-    z-index: 2;
 
     &--show {
       display: flex;
@@ -214,12 +271,8 @@
     height: 608px;
     transform: translateX(0);
 
-    z-index: -2;
-
     img {
-      height: 100%;
-      object-fit: cover;
-      object-position: 75% 50%;
+      height: 608px;
     }
   }
 
