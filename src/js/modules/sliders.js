@@ -9,7 +9,7 @@ $('.present__slider').slick({
   autoplaySpeed: 5000,
   responsive: [
     {
-      breakpoint: 1201,
+      breakpoint: 961,
       settings: {
         dots: false
       }
@@ -20,5 +20,19 @@ $('.present__slider').slick({
 $('.portfolio__slider').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
-  variableWidth: true
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 961,
+      settings: {
+        initialSlide: 1,
+        infinite: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '84px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 });
