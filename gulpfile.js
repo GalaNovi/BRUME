@@ -111,13 +111,13 @@ gulp.task('styleBuild', function () { // Создает из стилей less s
 });
 
 gulp.task('copyDev', function () { // копирует файлы для разработки
-  return gulp.src('src/{fonts,js,img,css}/*.*', {since: gulp.lastRun('copyDev')})
+  return gulp.src('src/{fonts,js,img,css,video}/*.*', {since: gulp.lastRun('copyDev')})
   .pipe(newer('dev'))
   .pipe(gulp.dest('dev'))
 });
 
 gulp.task('copyBuild', function () { // копирует шрифты для билда
-  return gulp.src('src/{fonts,css}/*.*')
+  return gulp.src('src/{fonts,css,video}/*.*')
   .pipe(gulp.dest('build'))
 });
 
@@ -182,7 +182,7 @@ gulp.task('serve', function () { // Запускает сервер, при из
 
 gulp.task('watch', function () { // Настройки вотчера
   gulp.watch('src/**/*.less', gulp.series('styleDev'));
-  gulp.watch('src/{fonts,img,js}/**/*.*', gulp.parallel('copyDev', 'jsDev', 'webpDev'));
+  gulp.watch('src/{fonts,img,js,video}/**/*.*', gulp.parallel('copyDev', 'jsDev', 'webpDev'));
   gulp.watch('src/*.html', gulp.series('copyHTMLDev'));
 });
 

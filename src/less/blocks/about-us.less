@@ -1,18 +1,62 @@
 .about-us {
-  padding-top: 340px;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 240px;
 
   background: #182c3d url("../img/video_bg.jpg") no-repeat center top;
   height: 595px;
+  overflow: hidden;
 }
 
 .about-us__heading {
   .indent-reset;
+  order: 1;
 
   font-weight: 400;
   font-size: 18px;
   color: #ffffff;
   text-align: center;
   letter-spacing: 0.6px;
+}
+
+.about-us__button {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 84px;
+  height: 84px;
+
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(254, 188, 128, 0.9);
+
+  transition: 0.5s;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+
+    width: 18px;
+    height: 21px;
+
+    background-image: url("../img/arrow_play.png");
+
+    opacity: 0.8;
+    transition: 0.5s;
+    content: "";
+  }
+
+  &:hover {
+    background-color: rgba(254, 188, 128, 1);
+
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
 // =============================== Tablet =========================

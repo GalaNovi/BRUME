@@ -2,9 +2,11 @@
 
 (function () {
   var DESKTOP_WIDTH = 960;
-  var DESKTOP_PADDING_CONTAINER = 15;
+  var TABLET_WIDTH = 768;
+  var PADDING_CONTAINER = 15;
   var TABLET_PADDING_CONTAINER = 37;
-  var TABLET_PADDING_BETWEEN_SLIDES = 42;
+  // var TABLET_PADDING_BETWEEN_SLIDES = 42;
+  // var MOBILE_PADDING_BETWEEN_SLIDES = 16;
   var SLIDES_TO_SHOW = 4;
   var WIDTH_HOVERED_SLIDE = 33.5;     // Процентов от ширины контейнера
   var WIDTH_UNHOVERED_SLIDE = 22.16;  // за вычетом паддингов
@@ -13,7 +15,7 @@
   var paddingsSum = 0;
 
   var onSlideHover = function (evt) {
-    window.innerWidth > DESKTOP_WIDTH ? paddingsSum = (DESKTOP_PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
+    window.innerWidth > DESKTOP_WIDTH || window.innerWidth <= TABLET_WIDTH ? paddingsSum = (PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
     var currentWidth = containerElement.offsetWidth - paddingsSum;
     var slidesActiveElements = document.querySelector('.portfolio__slider').querySelectorAll('div.slick-active');
 
@@ -26,7 +28,7 @@
   };
 
   var onSlideOut = function () {
-    window.innerWidth > DESKTOP_WIDTH ? paddingsSum = (DESKTOP_PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
+    window.innerWidth > DESKTOP_WIDTH || window.innerWidth <= TABLET_WIDTH ? paddingsSum = (PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
     var currentWidth = containerElement.offsetWidth - paddingsSum;
     var slidesActiveElements = document.querySelector('.portfolio__slider').querySelectorAll('div.slick-active');
 
@@ -54,17 +56,21 @@
   };
 
   var setWidthSlides = function (slides) {
-    window.innerWidth > DESKTOP_WIDTH ? paddingsSum = (DESKTOP_PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
+    window.innerWidth > DESKTOP_WIDTH || window.innerWidth <= TABLET_WIDTH ? paddingsSum = (PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
     var currentWidth = containerElement.offsetWidth - paddingsSum;
     if (window.innerWidth > DESKTOP_WIDTH) {
       for (var i = 0; i < slides.length; i++) {
         slides[i].style.width = currentWidth / SLIDES_TO_SHOW + 'px';
-        console.log(slides[i].style.width);
       }
-    } else {
+    }
+    // else if (window.innerWidth > TABLET_WIDTH) {
+    //   for (var i = 0; i < slides.length; i++) {
+    //     slides[i].style.width = currentWidth - (TABLET_PADDING_BETWEEN_SLIDES * 2) + 'px';
+    //   }
+    // }
+    else {
       for (var i = 0; i < slides.length; i++) {
-        slides[i].style.width = currentWidth - (TABLET_PADDING_BETWEEN_SLIDES * 2) + 'px';
-        console.log(slides[i].style.width);
+        slides[i].style.width = 'none';
       }
     }
   };

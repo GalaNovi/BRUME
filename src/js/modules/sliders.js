@@ -29,9 +29,23 @@ $('.portfolio__slider').slick({
         infinite: false,
         arrows: false,
         centerMode: true,
-        centerPadding: '84px',
+        centerPadding: '59px',
         slidesToShow: 1,
         slidesToScroll: 1,
+        variableWidth: false
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        initialSlide: 1,
+        infinite: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '22px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: false
       }
     }
   ]
