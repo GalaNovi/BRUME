@@ -75,6 +75,7 @@
 
   &--active {
     display: flex;
+    animation: service-item-appearance-desktop 2s;
   }
 }
 
@@ -182,6 +183,10 @@
 
   .service__item {
     padding-top: 0;
+
+    &--active {
+      animation: service-item-appearance-tablet 1s;
+    }
   }
 
   .service__image {
@@ -239,7 +244,7 @@
   }
 
   .service__menu-item {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     padding-right: 0;
     padding-bottom: 0;
     width: auto;
@@ -255,6 +260,7 @@
   .service__image {
     margin: 0 -15px;
     margin-bottom: 25px;
+    width: auto;
   }
 
   .service__project-count {

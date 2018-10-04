@@ -50,3 +50,15 @@ $('.portfolio__slider').slick({
     }
   ]
 });
+
+$('.reviews__slider').slick({
+  initialSlide: 1,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  fade: true,
+  dots: true,
+  dotsClass: 'reviews__slider-dots',
+  adaptiveHeight: true,
+  autoplay: true
+});

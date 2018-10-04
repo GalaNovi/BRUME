@@ -8,9 +8,15 @@
 
   menuBtnElement.addEventListener('click', function(evt) {
     evt.preventDefault();
-    menuElement.classList.toggle('header-menu--show');
+    menuElement.classList.toggle('header-menu--opened');
     if (window.innerWidth <= DESKTOP_WIDTH) {
-      socialsElement.classList.toggle('present__socials-list--show');
+      if (!socialsElement.classList.contains('present__socials-list--show')) {
+        setTimeout(function () {
+          socialsElement.classList.toggle('present__socials-list--show');
+        }, 300)
+      } else {
+        socialsElement.classList.toggle('present__socials-list--show');
+      }
     }
   });
 })();
