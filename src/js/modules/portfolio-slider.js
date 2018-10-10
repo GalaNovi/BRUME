@@ -5,8 +5,6 @@
   var TABLET_WIDTH = 768;
   var PADDING_CONTAINER = 15;
   var TABLET_PADDING_CONTAINER = 37;
-  // var TABLET_PADDING_BETWEEN_SLIDES = 42;
-  // var MOBILE_PADDING_BETWEEN_SLIDES = 16;
   var SLIDES_TO_SHOW = 4;
   var WIDTH_HOVERED_SLIDE = 33.5;     // Процентов от ширины контейнера
   var WIDTH_UNHOVERED_SLIDE = 22.16;  // за вычетом паддингов

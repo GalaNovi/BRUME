@@ -1,5 +1,6 @@
 [
   "src/js/modules/sliders.js",
   "src/js/modules/portfolio-slider.js",
-  "src/js/modules/service.js"
+  "src/js/modules/service.js",
+  "src/js/modules/menu-links-hover.js"
 ]
