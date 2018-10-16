@@ -1,5 +1,4 @@
 # Адаптивный проект [«Дизайн интерьеров Brume»](https://galanovi.github.io/)
-[Ссылка на сайт](https://galanovi.github.io/)
 
 ##### Поддержка браузеров:
   - Chrome
