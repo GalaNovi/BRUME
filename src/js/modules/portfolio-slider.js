@@ -28,7 +28,7 @@
   var onSlideOut = function () {
     window.innerWidth > DESKTOP_WIDTH || window.innerWidth <= TABLET_WIDTH ? paddingsSum = (PADDING_CONTAINER * 2) : paddingsSum = (TABLET_PADDING_CONTAINER * 2);
     var currentWidth = containerElement.offsetWidth - paddingsSum;
-    var slidesActiveElements = document.querySelector('.portfolio__slider').querySelectorAll('div.slick-active');
+    var slidesActiveElements = document.querySelector('.portfolio__slider').querySelectorAll('div.slick-slide');
 
     for (var i = 0; i < slidesActiveElements.length; i++) {
       slidesActiveElements[i].style.width = currentWidth / SLIDES_TO_SHOW + 'px';
@@ -61,11 +61,6 @@
         slides[i].style.width = currentWidth / SLIDES_TO_SHOW + 'px';
       }
     }
-    // else if (window.innerWidth > TABLET_WIDTH) {
-    //   for (var i = 0; i < slides.length; i++) {
-    //     slides[i].style.width = currentWidth - (TABLET_PADDING_BETWEEN_SLIDES * 2) + 'px';
-    //   }
-    // }
     else {
       for (var i = 0; i < slides.length; i++) {
         slides[i].style.width = 'none';

@@ -1,10 +1,11 @@
 .about-us {
+  position: relative;
   display: flex;
   flex-direction: column;
 
   padding-top: 240px;
 
-  background: #182c3d url("../img/video_bg.jpg") no-repeat center top;
+  background: #182c3d url("../img/bg/video_bg.jpg") no-repeat center top;
   height: 595px;
   overflow: hidden;
 }
@@ -30,6 +31,7 @@
   border: none;
   border-radius: 50%;
   background-color: rgba(254, 188, 128, 0.9);
+  outline: none;
 
   transition: 0.5s;
   cursor: pointer;
@@ -43,14 +45,15 @@
     width: 18px;
     height: 21px;
 
-    background: url("../img/arrow_play.png") no-repeat;
+    background: url("../img/other/arrow_play.png") no-repeat;
 
     opacity: 0.8;
     transition: 0.5s;
     content: "";
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba(254, 188, 128, 1);
 
     &::before {
@@ -59,13 +62,88 @@
   }
 }
 
+.about-us__video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.about-us__video-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ubout-us__video-close {
+  position: absolute;
+  top: 0;
+  right: -50px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 18px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: #ced3d7;
+    transition: 0.2s;
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.about-us__video {
+  width: 70vw;
+
+  border-radius: 15px;
+  border: 15px solid #112231;
+}
+
 // =============================== Tablet =========================
 
 @media (max-width: @desktop) {
   .about-us {
     padding-top: 310px;
 
-    background: #182c3d url("../img/video_bg-tablet.jpg") no-repeat -240px bottom;
+    background: #182c3d url("../img/bg/video_bg-tablet.jpg") no-repeat -240px bottom;
     height: 813px;
   }
 
@@ -91,7 +169,7 @@
       width: 28px;
       height: 32px;
 
-      background: url("../img/arrow_play_tablet.png") no-repeat;
+      background: url("../img/other/arrow_play_tablet.png") no-repeat;
     }
   }
 }
@@ -100,11 +178,25 @@
 
 @media (max-width: @tablet) {
   .about-us {
-    padding-top: 335px;
+    padding-top: 225px;
     height: 620px;
   }
 
   .about-us__heading {
     width: auto;
+  }
+
+  .about-us__button {
+    margin-bottom: 25px;
+    width: 84px;
+    height: 84px;
+
+    &::before {
+
+      width: 18px;
+      height: 21px;
+
+      background-size: cover;
+    }
   }
 }

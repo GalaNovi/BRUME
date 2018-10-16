@@ -20,7 +20,7 @@ $('.present__slider').slick({
 $('.portfolio__slider').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
-  variableWidth: true,
+  infinite: false,
   responsive: [
     {
       breakpoint: 961,

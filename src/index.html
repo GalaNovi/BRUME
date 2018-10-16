@@ -6,41 +6,53 @@
     <meta name="description" content="Создаем дизайн интерьеров, которые будут радовать лаконичностью и уютом!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>«Brume»</title>
-    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="preload" href="fonts/Circe-Regular.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/IntroScriptR.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/PlayfairDisplayBold.woff2" as="font" crossorigin> -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="preload" href="fonts/PlayfairDisplayBold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/MullerLight.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/Raleway-ExtraBold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="preload" href="js/menu.js" as="script">
     <script src="js/ofi.min.js"></script>
+    <style>
+      body {
+        opacity: 0;
+        transition: 1s;
+      }
+    </style>
+    <script>
+      function loadPage() {
+        document.querySelector("body").style.opacity = '1';
+      }
+    </script>
   </head>
   <body>
 
     <div style="display:none;">
-      <include src="dev/img/sprite.svg"></include>
+      <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
+    <header class="page-header" id="top">
       <div class="container">
         <h1 class="page-header__heading">Дизайн интерьеров</h1>
-        <button class="page-header__menu-button">
+        <button class="page-header__menu-button page-header__menu-button--open">
           <span class="visually-hidden">Открыть или закрыть меню</span>
         </button>
         <nav class="header-menu">
           <ul class="header-menu__list">
             <li class="header-menu__item"><a href="#">Главная</a></li>
             <li class="header-menu__item"><a href="#features">Преимущества</a></li>
-            <li class="header-menu__item"><a href="#portfilio">Портфолио</a></li>
+            <li class="header-menu__item"><a href="#portfolio">Портфолио</a></li>
             <li class="header-menu__item"><a href="#service">Наши услуги</a></li>
             <li class="header-menu__item"><a href="#reviews">Отзывы</a></li>
             <li class="header-menu__item"><a href="#contacts ">Контакты</a></li>
           </ul>
         </nav>
         <picture class="page-header__logo">
-          <source media="(max-width: 768px)" srcset="img/logo_header-mobile.png">
-          <source media="(max-width: 960px)" srcset="img/logo_header-tablet.png">
-          <img src="img/logo_header.png" alt="Логотип">
+          <source media="(max-width: 768px)" srcset="img/logo/logo_header-mobile.png">
+          <source media="(max-width: 960px)" srcset="img/logo/logo_header-tablet.png">
+          <img src="img/logo/logo_header.png" alt="Логотип">
         </picture>
         <p class="page-header__phone">
           <svg class="page-header__phone-icon" width="15" height="15" aria-hidden="true">
@@ -57,30 +69,42 @@
           <div class="present__slider">
             <div class="present__slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="img/slide_header1-mobile.jpg">
-                <source media="(max-width: 960px)" srcset="img/slide_header1-tablet.jpg">
-                <img class="slide" src="img/slide_header1.jpg" alt="Пример нашей работы">
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/presents/slide_header1-mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/presents/slide_header1-tablet.webp">
+                <source type="image/webp" srcset="img/presents/slide_header1.webp">
+                <source media="(max-width: 768px)" srcset="img/presents/slide_header1-mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/presents/slide_header1-tablet.jpg">
+                <img class="slide" src="img/presents/slide_header1.jpg" alt="Пример нашей работы">
               </picture>
             </div>
             <div class="present__slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="img/slide_header2-mobile.jpg">
-                <source media="(max-width: 960px)" srcset="img/slide_header2-tablet.jpg">
-                <img class="slide" src="img/slide_header2.jpg" alt="Пример нашей работы">
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/presents/slide_header2-mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/presents/slide_header2-tablet.webp">
+                <source type="image/webp" srcset="img/presents/slide_header2.webp">
+                <source media="(max-width: 768px)" srcset="img/presents/slide_header2-mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/presents/slide_header2-tablet.jpg">
+                <img class="slide" src="img/presents/slide_header2.jpg" alt="Пример нашей работы">
               </picture>
             </div>
             <div class="present__slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="img/slide_header3-mobile.jpg">
-                <source media="(max-width: 960px)" srcset="img/slide_header3-tablet.jpg">
-                <img class="slide" src="img/slide_header3.jpg" alt="Пример нашей работы">
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/presents/slide_header3-mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/presents/slide_header3-tablet.webp">
+                <source type="image/webp" srcset="img/presents/slide_header3.webp">
+                <source media="(max-width: 768px)" srcset="img/presents/slide_header3-mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/presents/slide_header3-tablet.jpg">
+                <img class="slide" src="img/presents/slide_header3.jpg" alt="Пример нашей работы">
               </picture>
             </div>
             <div class="present__slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="img/slide_header4-mobile.jpg">
-                <source media="(max-width: 960px)" srcset="img/slide_header4-tablet.jpg">
-                <img class="slide" src="img/slide_header4.jpg" alt="Пример нашей работы">
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/presents/slide_header4-mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/presents/slide_header4-tablet.webp">
+                <source type="image/webp" srcset="img/presents/slide_header4.webp">
+                <source media="(max-width: 768px)" srcset="img/presents/slide_header4-mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/presents/slide_header4-tablet.jpg">
+                <img class="slide" src="img/presents/slide_header4.jpg" alt="Пример нашей работы">
               </picture>
             </div>
           </div>
@@ -121,19 +145,19 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="container">
           <ol class="features__list">
-            <li class="features__item">
+            <li class="features__item wow fadeIn" data-wow-duration="1.5s" data-wow-offset="100">
               <h3 class="features__item-heading">Берем весь ремонт на себя</h3>
               <p class="features__item-text">Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
             </li>
-            <li class="features__item">
+            <li class="features__item wow fadeIn" data-wow-duration="1.5s" data-wow-offset="-100">
               <h3 class="features__item-heading">Мы - профессионалы своего дела</h3>
               <p class="features__item-text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги а студия уже реализовала свыше 1000 дизайн-проектов</p>
             </li>
-            <li class="features__item">
+            <li class="features__item wow fadeIn" data-wow-duration="1.5s" data-wow-offset="100">
               <h3 class="features__item-heading">Наши проекты индивидуальны</h3>
               <p class="features__item-text">Каждый, созданный студией, интерьер - индивидуальное и максимально продуманное решение для каждого вида помещения</p>
             </li>
-            <li class="features__item">
+            <li class="features__item wow fadeIn" data-wow-duration="1.5s" data-wow-offset="-100">
               <h3 class="features__item-heading">Рабатаем на выгодных условиях</h3>
               <p class="features__item-text">Ценовая политика студии очень лояльна, мы осуществляем контроль всего процесса работы  и получаем результат который делает клиентов счастивыми</p>
             </li>
@@ -144,36 +168,144 @@
 
       <section class="portfolio" id="portfolio">
         <div class="container">
-          <h2 class="portfolio__heading">Портфолио</h2>
-          <ul class="portfolio__navigation">
-            <li class="portfolio__navigation-item portfolio__navigation-item--active"><button href="#">Все проекты</button></li>
-            <li class="portfolio__navigation-item"><button href="#">Дизайн интерьеров</button></li>
-            <li class="portfolio__navigation-item"><button href="#">Отделочные работы</button></li>
+          <h2 class="portfolio__heading wow fadeIn" data-wow-duration="2s">Портфолио</h2>
+          <ul class="portfolio__navigation wow fadeInLeft">
+            <li class="portfolio__navigation-item"><button class="portfolio__navigation-button portfolio__navigation-button--all portfolio__navigation-button--active" href="#">Все проекты</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__navigation-button portfolio__navigation-button--design" href="#">Дизайн интерьеров</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__navigation-button portfolio__navigation-button--works" href="#">Отделочные работы</button></li>
           </ul>
-          <div class="portfolio__slider">
-            <div class="portfolio__item">
+          <div class="portfolio__slider wow fadeInRight">
+            <div class="portfolio__item portfolio__item--design">
               <h3 class="portfolio__item-heading">Дизайн интерьера гостиной</h3>
-              <img src="img/portfolio_1.jpg" alt="Дизайн интерьера гостиной">
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_1_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_1_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_1_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_1_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_1_tablet.jpg">
+                <img src="img/portfolio/portfolio_1_desktop.jpg" alt="Дизайн интерьера гостиной">
+              </picture>
               <span class="portfolio__item-class">Дизайн интерьера</span>
-              <a href="#" class="portfolio__item-preview"></a>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
             </div>
-            <div class="portfolio__item">
-              <h3 class="portfolio__item-heading">Дизайн интерьера гостиной</h3>
-              <img src="img/portfolio_2.jpg" alt="Пример гостинной">
+            <div class="portfolio__item portfolio__item--design">
+              <h3 class="portfolio__item-heading">Дизайн интерьера гостинной</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_2_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_2_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_2_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_2_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_2_tablet.jpg">
+                <img src="img/portfolio/portfolio_2_desktop.jpg" alt="Пример гостинной">
+              </picture>
               <span class="portfolio__item-class">Дизайн интерьера</span>
-              <a href="#" class="portfolio__item-preview"></a>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
             </div>
-            <div class="portfolio__item">
+            <div class="portfolio__item portfolio__item--design">
               <h3 class="portfolio__item-heading">Дизайн столовой в стиле «Бохо»</h3>
-              <img src="img/portfolio_3.jpg" alt="Дизайн столовой в стиле «Бохо»">
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_3_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_3_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_3_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_3_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_3_tablet.jpg">
+                <img src="img/portfolio/portfolio_3_desktop.jpg" alt="Дизайн столовой в стиле «Бохо»">
+              </picture>
               <span class="portfolio__item-class">Дизайн интерьера</span>
-              <a href="#" class="portfolio__item-preview"></a>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
             </div>
-            <div class="portfolio__item">
+            <div class="portfolio__item portfolio__item--design">
               <h3 class="portfolio__item-heading">Лофт интерьер для отеля Hiloft</h3>
-              <img src="img/portfolio_4.jpg" alt="Лофт интерьер для отеля Hiloft">
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_4_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_4_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_4_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_4_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_4_tablet.jpg">
+                <img src="img/portfolio/portfolio_4_desktop.jpg" alt="Лофт интерьер для отеля Hiloft">
+              </picture>
               <span class="portfolio__item-class">Дизайн интерьера</span>
-              <a href="#" class="portfolio__item-preview"></a>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+
+            <div class="portfolio__item portfolio__item--works">
+              <h3 class="portfolio__item-heading">Внутренняя отделка под VIP офис</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_5_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_5_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_5_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_5_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_5_tablet.jpg">
+                <img src="img/portfolio/portfolio_5_desktop.jpg" alt="Внутренняя отделка под VIP офиса">
+              </picture>
+              <span class="portfolio__item-class">Отделочные работы</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item portfolio__item--design">
+              <h3 class="portfolio__item-heading">Дизайн интерьера кухни</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_6_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_6_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_6_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_6_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_6_tablet.jpg">
+                <img src="img/portfolio/portfolio_6_desktop.jpg" alt="Дизайн интерьера кухни">
+              </picture>
+              <span class="portfolio__item-class">Дизайн интерьера</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item portfolio__item--works">
+              <h3 class="portfolio__item-heading">Внутренняя отделка камнем</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_7_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_7_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_7_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_7_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_7_tablet.jpg">
+                <img src="img/portfolio/portfolio_7_desktop.jpg" alt="Внутренняя отделка камнем">
+              </picture>
+              <span class="portfolio__item-class">Отделочные работы</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item portfolio__item--design">
+              <h3 class="portfolio__item-heading">Дизайн интерьера магазина</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_8_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_8_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_8_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_8_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_8_tablet.jpg">
+                <img src="img/portfolio/portfolio_8_desktop.jpg" alt="Дизайн интерьера магазина">
+              </picture>
+              <span class="portfolio__item-class">Дизайн интерьера</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+
+            <div class="portfolio__item portfolio__item--works">
+              <h3 class="portfolio__item-heading">Внутренняя отделка частного дома</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_9_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_9_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_9_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_9_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_9_tablet.jpg">
+                <img src="img/portfolio/portfolio_9_desktop.jpg" alt="Внутренняя отделка частного дома">
+              </picture>
+              <span class="portfolio__item-class">Отделочные работы</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
+            </div>
+            <div class="portfolio__item portfolio__item--works">
+              <h3 class="portfolio__item-heading">Внутренняя отделка ванной комнаты</h3>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/portfolio/portfolio_10_mobile.webp">
+                <source type="image/webp" media="(max-width: 960px)" srcset="img/portfolio/portfolio_10_tablet.webp">
+                <source type="image/webp" srcset="img/portfolio/portfolio_10_desktop.webp">
+                <source media="(max-width: 768px)" srcset="img/portfolio/portfolio_10_mobile.jpg">
+                <source media="(max-width: 960px)" srcset="img/portfolio/portfolio_10_tablet.jpg">
+                <img src="img/portfolio/portfolio_10_desktop.jpg" alt="Внутренняя отделка ванной комнаты">
+              </picture>
+              <span class="portfolio__item-class">Отделочные работы</span>
+              <a href="#portfolio" class="portfolio__item-preview"></a>
             </div>
           </div>
         </div>
@@ -182,10 +314,10 @@
 
       <section class="service" id="service">
         <div class="container">
-          <h2 class="service__heading">Наши услуги</h2>
+          <h2 class="service__heading wow fadeIn">Наши услуги</h2>
           <div class="service__content-wrapper">
             <aside class="service__menu">
-              <ul class="service__menu-list">
+              <ul class="service__menu-list wow fadeInLeft">
                 <li class="service__menu-item"><button type="button">Дизайн жилого помещения</button></li>
                 <li class="service__menu-item"><button type="button">Дизайн отельных комнат</button></li>
                 <li class="service__menu-item service__menu-item--active"><button type="button">Дизайн коммерческих объектов</button></li>
@@ -194,7 +326,7 @@
                 <li class="service__menu-item"><button type="button">Выезд дизайнера на дом</button></li>
               </ul>
             </aside>
-            <ul class="servise__list">
+            <ul class="servise__list wow fadeInRight">
               <li class="service__item">
                 <h3 class="service__item-heading">Дизайн жилого помещения</h3>
                 <small class="service__project-count">325 проектов</small>
@@ -202,7 +334,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/living.jpg" alt="Дизайн жилого помещения">
+                  <img src="img/service/living.jpg" alt="Дизайн жилого помещения">
                 </picture>
               </li>
               <li class="service__item">
@@ -212,7 +344,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/room.jpg" alt="Дизайн отдельных комнат">
+                  <img src="img/service/room.jpg" alt="Дизайн отдельных комнат">
                 </picture>
               </li>
               <li class="service__item service__item--active">
@@ -222,7 +354,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/commerce.jpg" alt="Дизайн коммерческих объектов">
+                  <img src="img/service/commerce.jpg" alt="Дизайн коммерческих объектов">
                 </picture>
               </li>
               <li class="service__item">
@@ -232,7 +364,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/turnkey.jpg" alt="Ремонт под ключ">
+                  <img src="img/service/turnkey.jpg" alt="Ремонт под ключ">
                 </picture>
               </li>
               <li class="service__item">
@@ -242,7 +374,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/works.jpg" alt="Отделочные работы">
+                  <img src="img/service/works.jpg" alt="Отделочные работы">
                 </picture>
               </li>
               <li class="service__item">
@@ -252,7 +384,7 @@
                 </p>
                 <button class="service__button" type="button">Консультация</button>
                 <picture class="service__image">
-                  <img src="img/designer.jpg" alt="Выезд дизайнера на дом">
+                  <img src="img/service/designer.jpg" alt="Выезд дизайнера на дом">
                 </picture>
               </li>
             </ul>
@@ -261,39 +393,46 @@
         <div class="lines"></div>
       </section>
 
-      <section class="about-us">
+      <section class="about-us wow fadeInUp">
         <h2 class="about-us__heading">О студии дизайна интерьеров BRUME за 2 минуты</h2>
         <button class="about-us__button" type="button"></button>
           <span class="visually-hidden">Показать видео</span>
         </button>
-
+        <div class="about-us__video-overlay about-us__video-overlay--hidden">
+          <div class="about-us__video-wrapper">
+            <video class="about-us__video" src="#" controls></video>
+            <button class="ubout-us__video-close" type="button">
+              <span class="visually-hidden">Закрыть видео</span>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="stages">
         <div class="container">
-          <h2 class="stages__heading">Этапы работы</h2>
+          <h2 class="stages__heading wow fadeIn">Этапы работы</h2>
           <ol class="stages__list">
-            <li class="stages__item">
+            <li class="stages__item wow fadeInLeft">
               <h3 class="stages__item-heading">Консультация</h3>
               <p class="stages__item-text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
             </li>
-            <li class="stages__item">
+            <li class="stages__item wow fadeInDown">
               <h3 class="stages__item-heading">Техническое задание</h3>
               <p class="stages__item-text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
             </li>
-            <li class="stages__item">
+            <li class="stages__item wow fadeInRight">
               <h3 class="stages__item-heading">Замеры и планировка</h3>
               <p class="stages__item-text">Фиксируем размеры стен, окон, плинтусов, дверных проемов для эффективной работы.</p>
             </li>
-            <li class="stages__item">
+            <li class="stages__item wow fadeInLeft">
               <h3 class="stages__item-heading">Дизайн-концепция</h3>
               <p class="stages__item-text">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. Подбираем мебель.</p>
             </li>
-            <li class="stages__item">
+            <li class="stages__item wow fadeInUp">
               <h3 class="stages__item-heading">3D Визуализация</h3>
               <p class="stages__item-text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам.</p>
             </li>
-            <li class="stages__item">
+            <li class="stages__item wow fadeInRight">
               <h3 class="stages__item-heading">Комплектация интерьера</h3>
               <p class="stages__item-text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
             </li>
@@ -302,13 +441,13 @@
         <div class="lines"></div>
       </section>
 
-      <section class="contacts" id="contacts">
+      <section class="contacts wow fadeInUp" data-wow-duration="2s" id="contacts">
         <div class="container">
           <h2 class="visually-hidden">Оставьте свои контакты</h2>
           <div class="contacts__content-wrapper">
-            <strong class="contacts__question">Мечтаете<br> об интерьере от BRUME?  </strong>
+            <strong class="contacts__question wow fadeIn">Мечтаете<br> об интерьере от BRUME?</strong>
             <p class="contacts__request">Оставьте контактные данные, менеджер свяжется с вами в течение 15 минут, для уточнения всех деталей.</p>
-            <form class="contacts__form" action="https://echo.htmlacademy.ru" method="POST">
+            <form class="contacts__form wow fadeInLeft" action="https://echo.htmlacademy.ru" method="POST">
               <p class="contacts__item contacts__item--name">
                 <label class="visually-hidden" for="name-field">Введите ваше имя</label>
                 <input class="contacts__input" type="text" name="name" id="name-field" placeholder="Имя*" required>
@@ -331,10 +470,10 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
-          <h2 class="reviews__heading">Отзывы наших клиентов</h2>
-          <div class="reviews__slider">
+          <h2 class="reviews__heading wow fadeIn" data-wow-duration="2s">Отзывы наших клиентов</h2>
+          <div class="reviews__slider wow fadeInLeft">
             <div class="reviews__slide">
               <div class="reviews__slide-content-wrapper">
                 <div class="reviews__slide-text-wrapper">
@@ -342,9 +481,9 @@
                   <span class="reviews__author-info">Услуга: дизайн дома</span>
                   <p class="reviews__text">Закончили постройку дома, и вдруг поняли, что понятия не имеем, как гармонично его обустроить. Идей много, а с их реализацией возникли проблемы. По рекомендации коллеги обратилась за помощью в вашу фирму. И это было самое лучшее решение! Помогли упорядочить множество идей и выбрать лучшие. Ремонт прошёл быстро, мы остались довольны! Лучше довериться профессионалам, ведь это наш дом на долгие годы.</p>
                 </div>
-                <img class="reviews__photo" src="img/reviews_author1.jpg" alt="Фото автора отзыва">
+                <img class="reviews__photo" src="img/reviews/reviews_author1.jpg" alt="Фото автора отзыва">
                 <div class="reviews__photo-next-review">
-                  <img src="img/reviews_author2.jpg" alt="Фото автора следующего отзыва">
+                  <img src="img/reviews/reviews_author2.jpg" alt="Фото автора следующего отзыва">
                 </div>
               </div>
             </div>
@@ -355,12 +494,12 @@
                   <span class="reviews__author-info">Услуга: интерьер детской</span>
                   <p class="reviews__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как мы и хотели. В следующий раз обратимся к BRUME!</p>
                 </div>
-                <img class="reviews__photo" src="img/reviews_author2.jpg" alt="Фото автора отзыва">
+                <img class="reviews__photo" src="img/reviews/reviews_author2.jpg" alt="Фото автора отзыва">
                 <div class="reviews__photo-preview-review">
-                  <img src="img/reviews_author1.jpg" alt="Фото автора предыдущего отзыва">
+                  <img src="img/reviews/reviews_author1.jpg" alt="Фото автора предыдущего отзыва">
                 </div>
                 <div class="reviews__photo-next-review">
-                  <img src="img/reviews_author3.jpg" alt="Фото автора следующего отзыва">
+                  <img src="img/reviews/reviews_author3.jpg" alt="Фото автора следующего отзыва">
                 </div>
               </div>
             </div>
@@ -371,12 +510,12 @@
                   <span class="reviews__author-info">Услуга: интерьер гостинной</span>
                   <p class="reviews__text">Мне очень понравилось, как нам сделали интерьер гостиной. Мы решили начать ремонт в нашем доме именно с нее, ведь это центральная комната, где мы будем собираться семьей. Дизайн профессиональный, специалисты учли все наши пожелания!</p>
                 </div>
-                <img class="reviews__photo" src="img/reviews_author3.jpg" alt="Фото автора отзыва">
+                <img class="reviews__photo" src="img/reviews/reviews_author3.jpg" alt="Фото автора отзыва">
                 <div class="reviews__photo-preview-review">
-                  <img src="img/reviews_author2.jpg" alt="Фото автора предыдущего отзыва">
+                  <img src="img/reviews/reviews_author2.jpg" alt="Фото автора предыдущего отзыва">
                 </div>
                 <div class="reviews__photo-next-review">
-                  <img src="img/reviews_author4.jpg" alt="Фото автора следующего отзыва">
+                  <img src="img/reviews/reviews_author4.jpg" alt="Фото автора следующего отзыва">
                 </div>
               </div>
             </div>
@@ -387,9 +526,9 @@
                  <span class="reviews__author-info">Услуга: дизайн квартиры</span>
                  <p class="reviews__text">Обращался в HiLoftDesign для ремонта новой квартиры. Ребята знают своё дело! Все мои пожелания были учтены, а вопросы решались оперативно. Спасибо за качественную и быструю работу!</p>
                 </div>
-                <img class="reviews__photo" src="img/reviews_author4.jpg" alt="Фото автора отзыва">
+                <img class="reviews__photo" src="img/reviews/reviews_author4.jpg" alt="Фото автора отзыва">
                 <div class="reviews__photo-preview-review">
-                  <img src="img/reviews_author3.jpg" alt="Фото автора предыдущего отзыва">
+                  <img src="img/reviews/reviews_author3.jpg" alt="Фото автора предыдущего отзыва">
                 </div>
               </div>
             </div>
@@ -403,9 +542,9 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__content-wrapper">
-          <div class="page-footer__copyrights">BRUME interior, 2017 ©</div>
-          <div class="page-footer__middle-wrapper">
-            <div class="page-footer__logo"><img src="img/logo_footer.png" alt="Логотип"></div>
+          <div class="page-footer__copyrights wow fadeInLeft">BRUME interior, 2017 ©</div>
+          <div class="page-footer__middle-wrapper wow fadeInUp">
+            <div class="page-footer__logo"><a href="#top"><img src="img/logo/logo_footer.png" alt="Логотип"></a></div>
             <ul class="page-footer__socials">
               <li class="page-footer__socials-item">
                 <a href="#">
@@ -433,7 +572,7 @@
               </li>
             </ul>
           </div>
-          <div class="page-footer__design-author">HolodnayaDesign</div>
+          <div class="page-footer__design-author wow fadeInRight">HolodnayaDesign</div>
         </div>
       </div>
     </footer>
@@ -443,7 +582,11 @@
     <script src="js/for-each-polyfill.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/slick.min.js" onload="loadPage()"></script>
     <script src="js/all.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

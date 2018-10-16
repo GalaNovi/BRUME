@@ -45,6 +45,7 @@
   height: 18px;
 
   border: none;
+  outline: none;
   background-color: transparent;
 
   cursor: pointer;
@@ -60,7 +61,6 @@
     height: 2px;
 
     background-color: #ffffff;
-    transition: 0.5s;
     content: "";
   }
 
@@ -68,6 +68,36 @@
     top: 8px;
 
     box-shadow: 0 8px 0 0 #ffffff;
+  }
+
+  &--close {
+    animation: burger-rotate-right @burger-animation-speed;
+    animation-delay: 0.3s;
+
+    &::before {
+      animation: burger-to-cross-1-desktop @burger-animation-speed;
+      animation-fill-mode: forwards;
+    }
+
+    &::after {
+      animation: burger-to-cross-2-desktop @burger-animation-speed;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &--open {
+    animation: burger-rotate-left @burger-animation-speed;
+    animation-delay: 0.3s;
+
+    &::before {
+      animation: cross-to-burger-1-desktop @burger-animation-speed;
+      animation-fill-mode: forwards;
+    }
+
+    &::after {
+      animation: cross-to-burger-2-desktop @burger-animation-speed;
+      animation-fill-mode: forwards;
+    }
   }
 }
 
@@ -130,6 +160,30 @@
     &::after {
       top: 20px;
       box-shadow: 0 20px 0 0 #ffffff;
+    }
+
+    &--close {
+      &::before {
+        animation: burger-to-cross-1-tablet @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+
+      &::after {
+        animation: burger-to-cross-2-tablet @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &--open {
+      &::before {
+        animation: cross-to-burger-1-tablet @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+
+      &::after {
+        animation: cross-to-burger-2-tablet @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
     }
   }
 
@@ -196,6 +250,30 @@
     &::after {
       top: 10px;
       box-shadow: 0 10px 0 0 #ffffff;
+    }
+
+    &--close {
+      &::before {
+        animation: burger-to-cross-1-mobile @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+
+      &::after {
+        animation: burger-to-cross-2-mobile @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &--open {
+      &::before {
+        animation: cross-to-burger-1-mobile @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
+
+      &::after {
+        animation: cross-to-burger-2-mobile @burger-animation-speed;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }

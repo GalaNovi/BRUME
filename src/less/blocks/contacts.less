@@ -1,5 +1,5 @@
 .contacts {
-  background: #182c3d url("../img/contacts_bg.jpg") no-repeat right -30px;
+  background: #182c3d url("../img/bg/contacts_bg.jpg") no-repeat right -30px;
 
   .container {
     background-image: none;
@@ -95,14 +95,14 @@
     width: 18px;
     height: 20px;
 
-    background: url("../img/input_name.png") no-repeat;
+    background: url("../img/other/input_name.png") no-repeat;
   }
 
   &--phone {
     width: 20px;
     height: 20px;
 
-    background: url("../img/input_phone.png") no-repeat;
+    background: url("../img/other/input_phone.png") no-repeat;
   }
 
   &--email {
@@ -110,7 +110,7 @@
     width: 22px;
     height: 16px;
 
-    background: url("../img/input_email.png") no-repeat;
+    background: url("../img/other/input_email.png") no-repeat;
   }
 }
 
@@ -129,10 +129,18 @@
 
 
   border: 2px solid #ffffff;
+  outline: none;
   border-radius: 5px;
   background-color: transparent;
 
+  transition: 0.2s;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #f8a25a;
+    background-color: #f8a25a;
+  }
 }
 
 .contacts__notice {
@@ -149,7 +157,7 @@
 
 @media (max-width: @desktop) {
   .contacts {
-    background: #182c3d url("../img/contacts_bg-tablet.jpg") no-repeat center bottom;
+    background: #182c3d url("../img/bg/contacts_bg-tablet.jpg") no-repeat center bottom;
   }
 
   .contacts__content-wrapper {
@@ -203,6 +211,11 @@
 
     border: none;
     background-color: #f8a25a;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
   }
 
   .contacts__notice {

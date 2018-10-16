@@ -76,6 +76,8 @@
 .reviews__photo-preview-review,
 .reviews__photo-next-review {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 200px;
   height: 192px;
 
@@ -87,7 +89,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 32, 58, 0.78);
+    background-color: rgba(0, 32, 58, 0.6);
     content: "";
     z-index: 1000;
   }
@@ -223,6 +225,7 @@
   .reviews__slide-content-wrapper {
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     padding: 0;
     padding-bottom: 50px;
     width: auto;
@@ -231,7 +234,7 @@
   }
 
   .reviews__slide-text-wrapper {
-    width: auto;
+    width: 100%;
   }
 
   .reviews__photo {
@@ -264,5 +267,6 @@
 
   .reviews__slider-dots {
     margin-top: 35px;
+    padding-right: 0;
   }
 }

@@ -10,7 +10,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
-var mincss = require("gulp-csso");
+var cssmin = require('gulp-cssmin');
 var imagemin = require("gulp-imagemin");
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var pngquant = require('imagemin-pngquant');
@@ -68,6 +68,19 @@ gulp.task('imagesBuild', function() { // Оптимизирует растров
     .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('svgBuild', function() { // Оптимизирует svg, которые не входят в спрайт (только для билда)
+  return gulp.src('src/img/other_svg/**/*.svg')
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false}
+        ]
+      })
+    ]))
+    .pipe(gulp.dest('build/img/other_svg'));
+});
+
 gulp.task('clearCache', function (done) { // Чистит кэш
   return cache.clearAll(done);
 });
@@ -106,18 +119,18 @@ gulp.task('styleBuild', function () { // Создает из стилей less s
       cascade: false,
       grid: true
     }))
-    .pipe(mincss())
+    .pipe(cssmin())
     .pipe(gulp.dest('build/css'))
 });
 
 gulp.task('copyDev', function () { // копирует файлы для разработки
-  return gulp.src('src/{fonts,js,img,css,video}/*.*', {since: gulp.lastRun('copyDev')})
+  return gulp.src('src/{fonts,js,img,css,video}/**/*.*', {since: gulp.lastRun('copyDev')})
   .pipe(newer('dev'))
   .pipe(gulp.dest('dev'))
 });
 
 gulp.task('copyBuild', function () { // копирует шрифты для билда
-  return gulp.src('src/{fonts,css,video}/*.*')
+  return gulp.src('src/{fonts,css,video}/**/*.*')
   .pipe(gulp.dest('build'))
 });
 
@@ -148,7 +161,7 @@ gulp.task('cleanBuild', function () { // удаляет папку "build"
 });
 
 gulp.task('spriteDev', function() { // Оптимизирует SVG и создает спрайт для разработки
-  return gulp.src("src/img/icon_*.svg")
+  return gulp.src("src/img/**/icon_*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
@@ -160,7 +173,7 @@ gulp.task('spriteDev', function() { // Оптимизирует SVG и созд�
 });
 
 gulp.task('spriteBuild', function() { // Оптимизирует SVG и создает спрайт для билда
-  return gulp.src("src/img/icon_*.svg")
+  return gulp.src("src/img/**/icon_*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
@@ -188,4 +201,4 @@ gulp.task('watch', function () { // Настройки вотчера
 
 gulp.task('dev', gulp.series(gulp.parallel('styleDev', 'copyDev', 'webpDev', 'jsDev', gulp.series('spriteDev', 'copyHTMLDev')), gulp.parallel('clearCache', 'watch', 'serve')));
 
-gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('spriteBuild', 'copyHTMLBuild', 'clearCache'))));
+gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'svgBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('spriteBuild', 'copyHTMLBuild', 'clearCache'))));
