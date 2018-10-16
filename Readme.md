@@ -1,4 +1,5 @@
 # Адаптивный проект [«Дизайн интерьеров Brume»](https://galanovi.github.io/)
+* Исполнитель: [Олег Новицкий](https://up.htmlacademy.ru/javascript/14/user/480757).
 
 ##### Поддержка браузеров:
   - Chrome
