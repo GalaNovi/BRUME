@@ -204,3 +204,4 @@ gulp.task('watch', function () { // Настройки вотчера
 gulp.task('dev', gulp.series(gulp.parallel('styleDev', 'copyDev', 'webpDev', 'jsDev', gulp.series('spriteDev', 'copyHTMLDev')), gulp.parallel('clearCache', 'watch', 'serve')));
 
 gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'svgBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('spriteBuild', 'copyHTMLBuild', 'clearCache'))));
+
