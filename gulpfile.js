@@ -6,16 +6,16 @@ var plumber = require("gulp-plumber");
 var del = require('del');
 var newer = require('gulp-newer');
 var browserSync = require('browser-sync').create();
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var svgstore = require("gulp-svgstore");
-var rename = require("gulp-rename");
-var cssmin = require('gulp-cssmin');
-var imagemin = require("gulp-imagemin");
+var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
+var svgstore = require('gulp-svgstore');
+var rename = require('gulp-rename');
+var cssmin = require('gulp-csso');
+var imagemin = require('gulp-imagemin');
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
-var webp = require("gulp-webp");
+var webp = require('gulp-webp');
 var gulpAutoprefixer = require('gulp-autoprefixer');
 var jsfiles = require('./jsfiles.json');
 var concat = require('gulp-concat');
@@ -119,7 +119,9 @@ gulp.task('styleBuild', function () { // Создает из стилей less s
       cascade: false,
       grid: true
     }))
-    .pipe(cssmin())
+    .pipe(cssmin({
+      restructure: false
+    }))
     .pipe(gulp.dest('build/css'))
 });
 
