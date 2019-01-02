@@ -1,4 +1,4 @@
-# ![alt text](src/img/favicon.png) Адаптивный проект [«Дизайн интерьеров Brume»](http://galanovi.h1n.ru/)
+# ![alt text](src/img/favicon.png) Адаптивный проект [«Дизайн интерьеров Brume»](https://galanovi.github.io/brume/index.html)
 
 ##### Поддержка браузеров:
   - Chrome
