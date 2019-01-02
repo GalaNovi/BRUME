@@ -71,32 +71,26 @@
   }
 
   &--close {
-    animation: burger-rotate-right @burger-animation-speed;
-    animation-delay: 0.3s;
+    animation: burger-rotate-right @burger-animation-speed 0.3s;
 
     &::before {
-      animation: burger-to-cross-1-desktop @burger-animation-speed;
-      animation-fill-mode: forwards;
+      animation: burger-to-cross-1-desktop @burger-animation-speed forwards;
     }
 
     &::after {
-      animation: burger-to-cross-2-desktop @burger-animation-speed;
-      animation-fill-mode: forwards;
+      animation: burger-to-cross-2-desktop @burger-animation-speed forwards;
     }
   }
 
   &--open {
-    animation: burger-rotate-left @burger-animation-speed;
-    animation-delay: 0.3s;
+    animation: burger-rotate-left @burger-animation-speed 0.3s;
 
     &::before {
-      animation: cross-to-burger-1-desktop @burger-animation-speed;
-      animation-fill-mode: forwards;
+      animation: cross-to-burger-1-desktop @burger-animation-speed forwards;
     }
 
     &::after {
-      animation: cross-to-burger-2-desktop @burger-animation-speed;
-      animation-fill-mode: forwards;
+      animation: cross-to-burger-2-desktop @burger-animation-speed forwards;
     }
   }
 }
